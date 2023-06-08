@@ -7,5 +7,5 @@ with open("./Input/Letters/starting_letter.txt") as letter_file:
     for name in names:
         stripped_name = name.strip()
         new_letter = content.replace(PLACEHOLDER, stripped_name)
-        with open(f"./Output/ReadyToSend/letter_for_{stripped_name}.txt", mode="w") as invitations:
+        with open(f"./Output/ReadyToSend/letter_for_{stripped_name}.txt", mode="x") as invitations:
             invitations.write(new_letter)
